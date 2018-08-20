@@ -10,16 +10,30 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    
+    @IBOutlet weak var txtname: UITextField!
+    @IBAction func clickbutton(_ sender: UIButton) {
+        self.hellolabel.text = "Hello \(self.txtname.text!)"
     }
+    
+   
+    @IBOutlet weak var helloLabel: UILabel!
 
-    override func didReceiveMemoryWarning() {
+
+   
+    
+        func viewDidLoad() {
+        super.viewDidLoad()
+        
+    self.hellolabel.text = "hello world after loaded"
+    }
+        func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
 
-}
 
+  
+    
+}
